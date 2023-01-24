@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json stringify and parse</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        
+        let sonikDat ={
+            name : "Sonika",
+            age :31,
+            email :"snjjkj@gmail.com",
+            love:"bhindi",
+        }
+        console.log(sonikDat);
+        let para1 = document.getElementById("demo").innerHTML=sonikDat.name +" age is :" + sonikDat.age + " email id : "+ sonikDat.email+ " love eating :" + sonikDat.love ;
+
+        let strSon =JSON.stringify(sonikDat);
+        console.log(strSon);
+        let para2 =document.getElementById("demo1").innerHTML=strSon;
+
+        let sonRepl = JSON.parse(strSon);
+        let para3 = document.getElementById("demo2").innerHTML=sonRepl.age;
+        console.log(sonRepl);
+    </script>
+    
+</body>
+</html>
